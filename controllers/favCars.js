@@ -33,7 +33,7 @@ const postThis = async (req, res) => {
     const request = await mongodb.getDb().db().collection('Cars').find({ _id: userId });
     request.toArray().then((lists) => {
         const result = mongodb.getDb().db().collection('FavCars').insertOne(lists[0]);
-        res.status(200).json(lists[0]);
+        res.status(201).json(lists[0]);
     });
 };
 
