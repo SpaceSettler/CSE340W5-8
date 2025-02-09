@@ -1,0 +1,7 @@
+GET https://cse340w5-8.onrender.com/cars HTTP/1.1
+###
+GET http://localhost:3000/cars HTTP/1.1
+###
+POST https://cse340w5-8.onrender.com/favCars/67a840fcbb9dba6832d930fb HTTP/1.1
+###
+POST http://localhost:3000/favCars/67a840fcbb9dba6832d930fb HTTP/1.1
