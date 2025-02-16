@@ -90,6 +90,39 @@
             "in": "path",
             "required": true,
             "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "Name": {
+                  "example": "any"
+                },
+                "Body": {
+                  "example": "any"
+                },
+                "Engine": {
+                  "example": "any"
+                },
+                "Accel": {
+                  "example": "any"
+                },
+                "Speed": {
+                  "example": "any"
+                },
+                "Power": {
+                  "example": "any"
+                },
+                "Torque": {
+                  "example": "any"
+                },
+                "Price": {
+                    "example": "any"
+                }
+              }
+            }
           }
         ],
         "responses": {
