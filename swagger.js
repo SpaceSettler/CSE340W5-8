@@ -6,6 +6,7 @@ const doc = {
     description: 'Description'
   },
   host: 'cse340w5-8.onrender.com'
+  //host: 'localhost:3000'
 };
 
 const outputFile = './swagger-output.json';

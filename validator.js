@@ -11,8 +11,15 @@ const userValidationRulesPut = () => {
     return [
         // id must be hexadecimal string
         param('id').matches(/^[0-9a-fA-F]{24}$/),
-        // can't leave any vaules unchanged
-        body('').matches("any")
+        // all must be strings
+        body('Name').isString(),
+        body('Body').isString(),
+        body('Engine').isString(),
+        body('Accel').isString(),
+        body('Speed').isString(),
+        body('Power').isString(),
+        body('Torque').isString(),
+        body('Price').isString()
     ]
 }
 
@@ -21,11 +28,9 @@ const validate = (req, res, next) => {
     if (errors.isEmpty()) {
         return next()
         }
-    const extractedErrors = []
-    errors.array().map(err => extractedErrors.push({ [err.param]: err.msg }))
 
     return res.status(422).json({
-        errors: extractedErrors,
+        errors: errors.array()
     })
 }
 
