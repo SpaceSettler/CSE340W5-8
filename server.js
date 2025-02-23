@@ -9,8 +9,8 @@ const port = process.env.PORT || 3000;
 
 app.use(bodyParser.json())
     .use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument))
-    .use('/', require('./routes'))
- /*   .get('/auth', (req, res) => {res.redirect(`https://github.com/login/oauth/authorize?client_id=${}`)})*/;
+    .use('/', require('./routes'));
+ /*   .get('/auth', (req, res) => {res.redirect(`https://github.com/login/oauth/authorize?client_id=${}`)})*/
 
 mongodb.initDb((err) => {
     if (err) {
